@@ -1,0 +1,36 @@
+<div fxLayout="row" 
+    fxLayout.xs="column" 
+    fxLayout.sm="column" 
+    class="list-frame"
+    >
+    <div fxFlex="30" 
+         fxFlex.xs="60" 
+         fxFlex.sm="65"
+         fxLayout="column" 
+         fxLayoutAlign="center center"
+         class="writing-note-frame"
+        >  
+        <div fxFlex="10" style="padding: 8%;">
+            <button mat-flat-button color="primary" (click)="addNote = true">Add Your Note
+                <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+            </button>
+        </div>
+        <br>
+        <br>
+        <div fxFlex="90"  class="note-frame">
+           <app-note-write *ngIf="addNote == true"></app-note-write>
+        </div>
+    </div>
+    <div fxFlex="70" 
+         fxFlex.xs="40" 
+         fxFlex.sm="35"
+         class="cards-frame"
+        >
+         <app-note-card 
+            *ngFor = "let note of notes" 
+            [title]="note.title" 
+            [body]= 'note.body'
+        >
+        </app-note-card>
+    </div>
+</div>

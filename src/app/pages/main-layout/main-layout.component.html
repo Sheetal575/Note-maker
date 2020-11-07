@@ -1,0 +1,16 @@
+<div fxLayout="column" 
+      class="main-frame mat-app-background"
+      [ngClass]="{'dark-theme': isDarkMode}">
+    <div fxFlex="8">
+        <mat-toolbar class="header" color="primary">
+            <span >Note-Maker</span>
+            <span class="example-spacer"></span>
+            <mat-slide-toggle [(ngModel)]="isDarkMode" color="accent">
+                <span >Dark Mode</span>
+            </mat-slide-toggle>
+        </mat-toolbar>
+    </div>
+    <div fxFlex="92"  class="list-container">
+        <router-outlet></router-outlet>    
+    </div>
+</div>

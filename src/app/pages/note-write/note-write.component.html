@@ -1,0 +1,26 @@
+<form fxLayout="column" #note = "ngForm" (ngSubmit)="onSubmit(note)">
+
+        <div class="example-container"  >
+            <mat-form-field appearance="fill">
+              <mat-label>Title</mat-label>
+              <input matInput 
+                     required
+                     name="title"
+                     [(ngModel)]="title">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Note</mat-label>
+              <textarea matInput 
+                        name="body"
+                        [(ngModel)]="body"></textarea>
+            </mat-form-field>
+        </div>
+        <button mat-flat-button 
+                color="primary"
+                type="submit"
+                [disabled]="!note.valid"
+                >Add </button>
+
+    
+    </form>

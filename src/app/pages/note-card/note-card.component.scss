@@ -1,0 +1,45 @@
+.card-frame{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+mat-card{
+   height: 90px;
+   margin-top:2%;
+   min-width: 36.5%;
+   text-overflow: ellipsis;
+   max-width: 36.5%;
+   transition: height  linear 1s;
+}
+
+mat-card:hover{
+    box-shadow: 0px 0px 8px 0px rgba($color: rgb(245, 93, 93), $alpha: 1.0);  
+    cursor: pointer;
+    height:170px;  
+    .close-icon{
+        opacity: 1;
+    }
+}
+.close-icon{
+    opacity: 0;
+    transition: opacity  linear 1s;
+    margin-top: -24px !important;
+}
+.note-body{
+    color: grey;
+    
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+@media screen and (max-width: 850px) {
+    mat-card {
+        min-width: 85%;
+        max-width: 85%;
+        height: 90px;
+        
+    }
+  }

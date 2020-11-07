@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap');
+@import '~@angular/material/theming';
+@include mat-core();
+$primary-light: mat-palette($mat-pink);
+$accent-light : mat-palette($mat-light-blue);
+$warn-light : mat-palette($mat-purple);
+ 
+$mat-theme-light: mat-light-theme($primary-light,$accent-light,$warn-light);
+@include angular-material-theme($mat-theme-light);
+
+//for dark theme
+$primary-dark:mat-palette($mat-cyan);
+$accent-dark:mat-palette($mat-grey);
+$warn-dark:mat-palette($mat-green);
+
+$mat-theme-dark: mat-dark-theme($primary-dark,$accent-dark,$warn-dark);
+.dark-theme{
+    @include angular-material-theme($mat-theme-dark)
+}
+html, body { height: 100%; }
+body { margin: 0;  font-family: 'Lobster', cursive;
+    font-family: 'Permanent Marker', cursive; }

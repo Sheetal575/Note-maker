@@ -1,0 +1,29 @@
+<div fxLayout="row" class="card-frame" fxLayoutAlign="center ">
+    <mat-card #card fxFlex="50">
+        <div fxLayout="column">
+            <div fxFlex="10" fxLayout="row" fxLayoutAlign="start start">
+                  <div fxFlex="87" >
+                      {{title}}
+                  </div>
+                  <div fxFlex="13">
+                        <button mat-icon-button 
+                                color="primary" 
+                                class="close-icon"
+                                aria-label="Example icon button with a home icon"
+                                
+                            >
+                        <mat-icon  (click)="onNoClick()">close</mat-icon>
+                    </button>
+                  </div>
+            </div>
+            <div fxFlex="90" class="note-body">
+                <span style="max-height: 10px;overflow-y: scroll;">{{body}}</span>
+            </div>
+        </div>
+    </mat-card>
+    
+
+
+</div>
+
+
